@@ -5,6 +5,8 @@
 # 4. local django
  
 import random
+import requests
+from pprint import pprint
 from datetime import datetime
 from django.shortcuts import render
 
@@ -78,3 +80,69 @@ def ispal(request, word):
         'result': result,
     }
     return render(request, 'ispal.html', context)
+
+def throw(request):
+    return render(request, 'throw.html')
+
+def catch(request):
+    #pprint(request.META)
+    #pprint(request.GET)
+    #print(request.GET.get('message'))
+    msg_list = ['안녕', '방가방가', '전쪽']
+    msg = request.GET.get('message')
+    date = request.GET.get('date')
+    context = {
+        'msg': msg,
+        'date': date,
+        'msg_list': msg_list,
+    }
+    return render(request, 'catch.html', context)
+
+
+def req(request):
+    return render(request, 'req.html')
+
+    
+def name(request):
+    content = request.GET.get('content')
+    rand =  sorted(random.sample(range(1, 46), 6))
+    # [random.randrange(1,46), random.randrange(1,46), random.randrange(1,46), random.randrange(1,46), random.randrange(1,46), random.randrange(1,46)]
+    food = ['한식', '중식', '양식', '일식']
+    context = {
+        'content': content,
+        'rand': rand,
+        'food': food,
+    }
+    return render(request, 'name.html', context)
+
+def artii(request):
+    # 2. ARTII api fontlist로 요청을 보내 폰트 정보를 받는다.
+    response = requests.get('http://artii.herokuapp.com/fonts_list').text
+    # 3. 문자열 데이터를 리스트로 변환한다.
+    #print(response)
+    #print(type(response))
+    fonts_list = response.split('\n')
+    print(fonts_list)
+    print(type(fonts_list))    
+    # 4. fonts_list에서 폰트 하나 선택
+    #font = random.choice(fonts_list)
+
+    context = {
+        'fonts_list': fonts_list,
+
+    }
+    return render(request, 'artii.html', context)
+
+def artii_result(request):
+    # 1. form에서 넘어온 데이터를 받는다.
+    word = request.GET.get('word')
+    font = request.GET.get('font')
+    ARTII_URL = f'http://artii.herokuapp.com/make?text={word}&font={font}'
+    
+    # 5. Artii api 주소로 우리가 만든 데이터와 함께 요청을 보낸다.
+    result = requests.get(ARTII_URL).text
+
+    context = {
+        'result' : result,
+    }
+    return render(request, 'artii_result.html', context)
