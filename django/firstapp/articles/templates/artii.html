@@ -1,4 +1,4 @@
-<form action="/artii-result/" method="GET">
+<form action="{% url 'articles:artii_result' %}" method="GET">
 단어를 입력해주세요: <input type="text" name="word">
 <br>
 폰트를 정해주세요:
@@ -8,4 +8,5 @@
     {% endfor %}
 </select>
 <input type="submit" value="만들기!">
+<a href="{% url 'articles:index' %}">
 </form>

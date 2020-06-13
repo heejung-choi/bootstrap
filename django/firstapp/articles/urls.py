@@ -2,8 +2,9 @@ from django.urls import path
 from . import views 
 # import view와 같지만 명시적으로 위와 같이 해주는 것을 좋아한다.
 
+app_name = 'articles'
 urlpatterns = [
-    path('index/', views.index),
+    path('index/', views.index, name='index'),
     path('dinner/', views.dinner),
     path('image/', views.image),
     path('hello/<str:name>/', views.hello),
@@ -17,6 +18,6 @@ urlpatterns = [
     path('catch/',views.catch),
     path('req/',views.req),
     path('name/',views.name),
-    path('artii/',views.artii),
-    path('artii-result/',views.artii_result),
+    path('artii/',views.artii, name='artii'),
+    path('artii-result/',views.artii_result, name='artii_result') ,
 ]

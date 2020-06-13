@@ -24,7 +24,10 @@ from pages import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     # 기존의 것 path만 남긴 후 제거
-    path('article/', include('articles.urls')),
-    # include : 어떤 파일 import 할거야? 
-    
+    path('articles/', include('articles.urls')),
+    # include : 어떤 파일 import 할거야?     
+    # view-source:127.0.0.1:8000/ articles/ -> 이후에 붙은 것으로 알겠다...
+    # 기존에 view-source:127.0.0.1:8000/index였다면 지금은 view-source:127.0.0.1:8000/articles/index가 된다.
+    #path('pages/', include('pages.urls')),
+    path('pages/', include('pages.urls')),
 ]
