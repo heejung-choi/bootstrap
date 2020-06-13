@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% extends 'base.html' %}
+<!-- extends는 무조건 최상단에 있어야 한다.-->
+{% block title %} ASCII {% endblock %}
+{% block content%}
     <h1>랜덤 이미지 출력기</h1>
     <img src="{{ image_url }}" alt="random-img">
-</body>
-</html>
+{% endblock %}

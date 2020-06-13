@@ -1,3 +1,8 @@
+{% extends 'base.html' %}
+<!-- extends는 무조건 최상단에 있어야 한다.-->
+{% block title %} ASCII {% endblock %}
+{% block content%}
+<br>
 <form action="{% url 'articles:artii_result' %}" method="GET">
 단어를 입력해주세요: <input type="text" name="word">
 <br>
@@ -10,3 +15,4 @@
 <input type="submit" value="만들기!">
 <a href="{% url 'articles:index' %}">
 </form>
+{% endblock %}

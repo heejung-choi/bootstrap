@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
-
+# 내장 라이브러리 os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -59,7 +59,9 @@ ROOT_URLCONF = 'firstapp.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'firstapp', 'templates')],
+        # 추가적으로 쓸 경로는 DIRS에 설정해준다.
+        # '/firstapp/templates' 이런식으로 하게 되면 윈도우에서 인식을 못한다.
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
