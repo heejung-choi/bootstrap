@@ -12,7 +12,7 @@ from django.shortcuts import render
 
 # Create your views here.
 def index(request):
-    return render(request, 'index.html')
+    return render(request, 'articles/index.html')
 
 
 def dinner(request):
@@ -21,7 +21,7 @@ def dinner(request):
     context = {
         'pick': pick,
     }
-    return render(request, 'dinner.html', context)
+    return render(request, 'articles/dinner.html', context)
 
 
 def image(request):
@@ -29,14 +29,14 @@ def image(request):
     context = {
         'image_url': image_url,
     }
-    return render(request, 'image.html', context)
+    return render(request, 'articles/image.html', context)
 
 
 def hello(request, name):
     context = {
         'name': name,
     }
-    return render(request, 'hello.html', context)
+    return render(request, 'articles/hello.html', context)
 
 
 def introduce(request, name, age):
@@ -44,7 +44,7 @@ def introduce(request, name, age):
         'name': name,
         'age': age,
     }
-    return render(request, 'introduce.html', context)
+    return render(request, 'articles/introduce.html', context)
 
 
 def times(request, num1, num2):
@@ -54,7 +54,7 @@ def times(request, num1, num2):
         'num2': num2,
         'result': result,
     }
-    return render(request, 'times.html', context)
+    return render(request, 'articles/times.html', context)
 
 
 def dtl_practice(request):
@@ -68,7 +68,7 @@ def dtl_practice(request):
         'messages': messages,
         'datetime_now': datetime_now,
     }
-    return render(request, 'dtl_practice.html', context)
+    return render(request, 'articles/dtl_practice.html', context)
 
 
 def ispal(request, word):
@@ -79,7 +79,7 @@ def ispal(request, word):
     context = {
         'result': result,
     }
-    return render(request, 'ispal.html', context)
+    return render(request, 'articles/ispal.html', context)
 
 def throw(request):
     return render(request, 'throw.html')
@@ -96,11 +96,11 @@ def catch(request):
         'date': date,
         'msg_list': msg_list,
     }
-    return render(request, 'catch.html', context)
+    return render(request, 'articles/catch.html', context)
 
 
 def req(request):
-    return render(request, 'req.html')
+    return render(request, 'articles/req.html')
 
     
 def name(request):
@@ -113,7 +113,7 @@ def name(request):
         'rand': rand,
         'food': food,
     }
-    return render(request, 'name.html', context)
+    return render(request, 'articles/name.html', context)
 
 def artii(request):
     # 2. ARTII api fontlist로 요청을 보내 폰트 정보를 받는다.
@@ -131,7 +131,7 @@ def artii(request):
         'fonts_list': fonts_list,
 
     }
-    return render(request, 'artii.html', context)
+    return render(request, 'articles/artii.html', context)
 
 def artii_result(request):
     # 1. form에서 넘어온 데이터를 받는다.
@@ -145,4 +145,4 @@ def artii_result(request):
     context = {
         'result' : result,
     }
-    return render(request, 'artii_result.html', context)
+    return render(request, 'articles/artii_result.html', context)
