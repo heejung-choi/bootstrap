@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Throw</h1>
-    <form action="/catch/" method="GET">
+    <form action="{% url 'articles:catch' %}" method="GET">
         <input type='text' name="message">
         <input type='date' name="date">
         <input type='submit'>
