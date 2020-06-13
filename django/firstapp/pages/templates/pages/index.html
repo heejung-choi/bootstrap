@@ -1,5 +1,13 @@
 {% extends 'base.html' %}
+{% load static %}
+<!--load를 해준 다음에야 사용할 수 있다.-->
 <!-- extends는 무조건 최상단에 있어야 한다.-->
+{% block css %}
+<link rel="stylesheet" href="{% static 'pages/stylesheet/style.css' %}">
+{% endblock %}
 {% block content%}
-    <h1>하이</h1>
+    <img src="{% static 'pages/images/su.jpg' %}" alt="">
+    <h4>신이나 신이나 엣헴엣헴 <span style='color:Yellow'>신이나<span></h4>
+    <img src="{% static 'images/옴팡이.jpg' %}" alt="">
+    <h1>옴팡옴팡옴팡옴팡</h1>
 {% endblock %}
