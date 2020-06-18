@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    
+    <style>
+      .navsize {
+        height: 100px;
+        font-size: 1.2em;
+      }
+
+      body{
+        font-family: 'Nanum Gothic', sans-serif;
+      }
+
+      .main {
+        height: 700px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .mainleft {
+        width: 40%;
+      }
+
+      .mainright {
+        width: 60%;
+      }
+
+      .maincard{
+        width: 80%;
+        height: 600px;
+        position: absolute;
+        z-index: 100;
+        margin-top: 15%;
+        margin-bottom: 15%;
+        margin-left: 10%;
+        margin-right: 10%;
+        top: -8%;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .cardleft {
+        width: 40%;
+      }
+
+      .cardright {
+        width: 55%;
+        margin-left: 5%;
+      }
+
+      .border-0 {
+        width: 100%;
+        height: 100%;
+        text-align: center;        
+      }
+      
+      .boldword{       
+        font-weight: bold; 
+        font-size: 1.5em;       
+      }
+      .cardword{                
+        font-size: 1.2em;       
+      }
+     
+     hr{
+      border-top: 3px solid rgba(0,0,0,.1);
+     }
+     a{
+       color:black
+     }
+    .shadows {
+      text-shadow: 2px 1px slategray;
+      font-weight: bold;
+    }
+    .ulfont{
+      font-size: 0.95em;
+    }
+    </style>
+</head>
+<body>
+    <div class="header">      
+        <nav class="navbar navbar-expand-md bg-white navbar-white navsize">
+          <a class="text-dark" href="#"><span style="font-size: 1.5em; font-weight: bold;">heejung /</span> 데이터분석, 백앤드</a>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul class="navbar-nav ml-auto topnav">
+                <li class="nav-item">
+                  <a class="text-dark" href="#">ABOUT ME &nbsp;</a>&nbsp;&nbsp;&nbsp;
+                </li>
+                <li class="nav-item">
+                  <a class="text-dark" href="#">EXPERIENCE & EDUCATION &nbsp;</a>&nbsp;&nbsp;&nbsp;
+                </li>
+                <li class="nav-item">
+                  <a class="text-dark" href="#">PROJECT &nbsp;</a>&nbsp;&nbsp;&nbsp;
+                </li>
+                <li class="nav-item">
+                  <a class="text-dark" href="#">SKILL &nbsp;</a>&nbsp;&nbsp;&nbsp;
+                </li>
+                <li class="nav-item">
+                  <a class="text-dark" href="#">CONTACT &nbsp;&nbsp;&nbsp;</a>
+                </li>    
+              </ul>
+            </div>  
+          </nav>          
+    </div>
+    <div class="main">
+      <div class="mainleft" style="background-color: rgb(230, 218, 206);"></div>
+      <div class="mainright"></div>
+    </div>
+    <div class="maincard">
+      <div class="cardleft">
+        <div class="border-0 shadow p-3 mb-5" style="background-color: rgb(244, 236, 230);">
+            <br>            
+            <img class="rounded-circle" src="img/희정.jpg" width="152px" height="200px">
+            <br><br>       
+            <p class="boldword">heejung <br></p>
+            <hr width="50px" size="10" align="center" color="blue">
+            <br>
+            <p class="cardword">데이터분석, 백앤드 <br>
+              choi951008@naver.com
+            </p>                   
+            <img src="img/git.png" onclick="location.href='https://github.com/heejung-choi'" width="90px" height="90px">
+            <br><a href="https://github.com/heejung-choi">github</a>          
+        </div>
+      </div>
+    <div class="cardright">
+    <br><br>
+    <h2 class="shadows">Application & Data</h2>
+    <br>
+    <img class="rounded" src="img/skill/r.png" width="50px" height="50px">
+    <img class="rounded" src="img/skill/python.png" width="50px" height="50px">
+    <img class="rounded" src="img/skill/django.png" width="50px" height="50px">
+    <img class="rounded" src="img/skill/javascript.jpeg" width="50px" height="50px">
+    <img class="rounded" src="img/skill/spring.jpg" width="50px" height="50px">
+    <img class="rounded" src="img/skill/html5.png" width="50px" height="50px">
+    <img class="rounded" src="img/skill/css.png" width="50px" height="50px">
+    <br><br>
+    <h2 class="shadows">Experience & Education</h2><br>
+    <ul class="ulfont font-weight-bold">
+    <li>14.03-19.08 국민대학교 경영정보학부</li>
+    <li>17.01-19.01 프라임에셋 온라인채널관리, 고객데이터관리</li>
+    <li>19.01-20.10 삼성화재서비스 장기보상부</li>
+    <li>19.11-20.07 멀티캠퍼스 OpenAPI를 활용한 데이터 전처리.시각화과정 수강</li>
+    </ul><br>    
+    <h2 class="shadows">Project</h2><br>
+    <img class="rounded" src="img/골목상권.png" width="150px" height="100px">&nbsp;&nbsp;&nbsp;
+    <img class="rounded" src="img/니카내카.png" width="150px" height="100px">&nbsp;&nbsp;&nbsp;
+    <img class="rounded" src="img/오팔.png" width="150px" height="100px">&nbsp;&nbsp;&nbsp;
+    <br><br>
+    <h6 class="font-weight-bold">골목상권 컨설팅 서비스 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 니카내카 &nbsp;&nbsp;&nbsp;&nbsp; 58세대를 위한 건강정보시스템 & 마켓</h6>
+    
+    
+    
+
+    </div>
+    </div>
+   
+
+
+
+
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
